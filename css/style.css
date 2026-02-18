@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+*,::before,::after{ margin: 0; box-sizing: border-box;}
+a{ text-decoration: none;}
+ul{ list-style: none; padding: 0;}
+button{ cursor: pointer;}
+:disabled{ cursor: not-allowed;}
+img{ vertical-align: bottom;}
+label{ display: inline-block;}
+
+html{ 
+     font-size: 15px;
+     --ff:"Inter", sans-serif;
+     --ffc:"Inspiration", cursive;
+}
+
+body{ font: 16px var(--ff);}
+
+.container{ max-width: 1260px; margin: auto; padding: 0 1rem; }
+.container-full{ max-width: 1390px; margin: auto; padding: 0 25px; }
+
+.row{ display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem;}
+
+.col-1{ grid-column: span 1; }
+.col-2{ grid-column: span 2; }
+.col-3{ grid-column: span 3; }
+.col-4{ grid-column: span 4; }
+.col-5{ grid-column: span 5; }
+.col-6{ grid-column: span 6; }
+.col-7{ grid-column: span 7; }
+.col-8{ grid-column: span 8; }
+.col-9{ grid-column: span 9; }
+.col-10{ grid-column: span 10; }
+.col-11{ grid-column: span 11; }
+.col-12{ grid-column: span 12; }
+.flex{ display: flex;}
+.align-center{ align-items: center;}
+.justify-space-bet{ justify-content: space-between;}
+.justify-right{ justify-content: end;}
+.justify-center{ justify-content: center;}
+.img-resp{ max-width: 100%; height: auto;}
+.text-center{ text-align: center;}
+.text-right{ text-align: right;}
+
+
+.wrap-1{ padding: 18.5px 0; box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.10)}
+.wrap-1 img{ float: left;}
+.logo a{ color: #000;}
+h1{ font-family: var(--ffc); font-size: 24px; white-space: nowrap;}
+nav ul{ gap: 48px;}
+nav a{ color: #4A5568; font-weight: 500; display: block;}
+.contactus{ width: 124px; height: 42px; border-radius: 5px;
+background: linear-gradient(225deg, #6675F7 0%, #57007B 100%); font-size: 14px; color: #fff; border: none;}
+
+
+.wrap-2{ padding: 70px 0;}
+.banner{ padding: 0 42.5px;}
+
+
+
+@media screen and (max-width:1278px){ 
+nav ul{ gap: 30px;}
+}
+
+@media screen and (max-width:980px){ 
+     nav{ display: none;}
+}
+
+@media screen and (max-width:767px){ 
+
+}
+
+@media screen and (max-width:460px){ 
+
+}
