@@ -12,12 +12,16 @@ html{
      font-size: 15px;
      --ff:"Inter", sans-serif;
      --ffc:"Inspiration", cursive;
+     --grad1:linear-gradient(225deg, #F76680 0%, #57007B 100%);
 }
 
 body{ font: 16px var(--ff);}
 
 .container{ max-width: 1260px; margin: auto; padding: 0 1rem; }
-.container-full{ max-width: 1390px; margin: auto; padding: 0 25px; }
+.container-nav{ max-width: 1390px; margin: auto; padding: 0 25px; }
+.container-full{ width: 100%; overflow-x: auto; margin: 63px 0 41px; }
+
+
 
 .row{ display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem;}
 
@@ -49,12 +53,33 @@ body{ font: 16px var(--ff);}
 h1{ font-family: var(--ffc); font-size: 24px; white-space: nowrap;}
 nav ul{ gap: 48px;}
 nav a{ color: #4A5568; font-weight: 500; display: block;}
-.contactus{ width: 124px; height: 42px; border-radius: 5px;
-background: linear-gradient(225deg, #6675F7 0%, #57007B 100%); font-size: 14px; color: #fff; border: none;}
+.contactus{ width: 124px; height: 42px; border-radius: 5px; background: linear-gradient(225deg, #6675F7 0%, #57007B 100%); font-size: 14px; color: #fff; border: none;}
 
 
-.wrap-2{ padding: 70px 0;}
-.banner{ padding: 0 42.5px;}
+.wrap-2{ padding: 70px 0 0 0;}
+.banner{ padding: 0 42.5px; position: relative; overflow: hidden; }
+.banner::before{ content: ''; display: block; position: absolute; width: 72px; height: 72px; background: var(--grad1); border-radius: 50%; bottom: 0; left: 33%; transform: translateY(50%);}
+.banner .lg{ font-size: 53px; font-weight: 900;}
+.banner .lg span.fwl{ font-weight: 300;}
+.banner span.bggrad{ background: linear-gradient(180deg, #DE4396 0%, rgba(13, 28, 159, 0.50) 100%); color: transparent; -webkit-background-clip: text; }
+.banner .banner-text{ padding-right: 26px;}
+.banner p:not(.lg){ font-size: 18px; margin: 28px 0 75px;}
+.banner a{ display: block; width: 175px; line-height: 52px; background: #3D63EA; color: #fff; text-align: center; border-radius: 5px;}
+
+
+.wrap-3{ padding: 46px 0 57px; background: #F9F9FF;}
+.pager{}
+.pager ul{ gap: 8px;}
+.pager a{ display: block; width: 13px; height: 13px; border: 1px solid #CBD5E0; border-radius: 50%;}
+.pager a.active{ background: var(--grad1);}
+.wrap-3 .container{ margin-top: 43.5px;}
+.wrap-3 .container-full .flex{ gap: 40px; }
+.service-card{ flex: 1 0 333px; background: #fff; padding: 16px; border-radius: 7px; }
+.service-card.active{ border: 1px solid; border-image-slice: 1; border-image-source: var(--grad1); }
+.service-card h3{ margin: 20px 0;}
+.service-card p{ color: #718096; font-size: 14px; line-height: 1.62; }
+.service-icon{ width: 58px; height:58px; border-radius: 50%; border: 1px solid #DE4396; display: grid; place-items: center; }
+
 
 
 
